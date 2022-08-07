@@ -29,4 +29,9 @@ def welcomebot(client,message):
 def command3(bot,message):
     bot.send_photo(message.chat.id,"https://imgur.com/gallery/YUJYQ")
     
+    
+print("Sucessfully completed an orbit")
+bot.run()
+
+    
 
