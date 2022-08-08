@@ -29,6 +29,11 @@ def welcomebot(client,message):
 @bot.on_message(filters.command('photo'))
 def command3(bot,message):
     bot.send_photo(message.chat.id,"https://imgur.com/gallery/YUJYQ")
+
+    
+@bot.on_message(filters.command('song'))
+def command3(bot,message):
+    bot.send_audio(message.chat.id,"https://www.youtube.com/watch?v=HxxNFEyDAy0")
     
     
 print("Sucessfully completed an orbit")
