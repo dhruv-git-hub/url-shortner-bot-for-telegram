@@ -1,9 +1,10 @@
 from pyrogram import Client,filters
+import os
 bot = Client(
     "MY first project",
-    api_id = 11363673,
-    api_hash = '9092d33af68c40aeed371f278ffd75ee',
-    bot_token='5290496073:AAGr8DiKkiyk1LeY81inSUKCZqiWQ0nuwy4'
+    api_id = os.environ.get('api_id'),
+    api_hash = os.environ.get('api_hash'),
+    bot_token=os.environ.get('bot_token')
 
 )
 #Start message
