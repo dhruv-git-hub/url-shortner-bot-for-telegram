@@ -2,6 +2,7 @@ from pyrogram import Client,filters
 import webbrowser
 import wikipedia
 import random
+import os
 bot = Client(
     "MY first project",
     api_id = os.environ.get('api_id'),
