@@ -1,5 +1,7 @@
 from pyrogram import Client,filters
-import os
+import webbrowser
+import wikipedia
+import random
 bot = Client(
     "MY first project",
     api_id = os.environ.get('api_id'),
