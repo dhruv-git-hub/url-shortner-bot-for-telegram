@@ -2,7 +2,7 @@ from pyrogram import Client,filters
 import webbrowser
 import wikipedia
 import random
-import TGCrypto
+import tgcrypto
 import os
 bot = Client(
     "MY first project",
