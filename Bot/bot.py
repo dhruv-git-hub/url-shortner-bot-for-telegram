@@ -34,6 +34,31 @@ def command3(bot,message):
 @bot.on_message(filters.command('song'))
 def command3(bot,message):
     bot.send_video(message.chat.id,"https://www.youtube.com/watch?v=HxxNFEyDAy0")
+ 
+@bot.on_message(filters.command('wiki'))
+def command4(bot,message):
+    qq=message.text
+    ans=qq.split(" ",1)
+    
+    try:
+        w=ans[1].title()
+        q=wikipedia.summary(w)
+        bot.send_message(message.chat.id,q)
+    except wikipedia.DisambiguationError as e:
+        s = random.choice(e.options)
+        print(type(s))
+        print(s)
+        p = wikipedia.summary(s)
+        bot.send_message(message.chat.id,p)
+
+######################################################################################################
+@bot.on_message(filters.command('browser'))
+def command5(bot,message):
+    qq=message.text
+    f=webbrowser.open(qq[9:]+".com")
+    #bot.send_message(message.chat.id,f)
+    print(qq[8:])
+    
     
     
 print("Sucessfully completed an orbit")
